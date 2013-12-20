@@ -1,7 +1,12 @@
-car:
-  -
-    id: 1
-    name: BMW
-  -
-    id: 2
-    name: Audi
+cars:
+- id: 1
+  name: BMW
+- id: 2
+  name: Audi
+boats:
+- id: 2
+  name: Titanic
+  sail_height: 12
+birds:
+- id: 2
+  name: Woodchuck
