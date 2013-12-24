@@ -35,6 +35,10 @@ module YRM
       @storage = {}
     end
 
+    def classes
+      @storage.keys.map(&:to_sym).map(&:capitalize)
+    end
+
     def inspect
       "<YRM::Storage Keys: #{@storage.keys}>"
     end
