@@ -7,8 +7,7 @@ module YRM
         if record.present?
           new(record)
         else
-          # TODO: raise YRM::RecordNotFound.new(id)
-          raise "Record for #{name} with id = #{id} not found"
+          raise YRM::RecordNotFound.new(id)
         end
       end
 
@@ -37,6 +36,12 @@ module YRM
     end
 
     def attribute_get(name)
+    end
+  end
+  
+  class RecordNotFound
+    def self.new(id)
+      "Record for #{name} with id = #{id} not found"
     end
   end
 end
